@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include multiorder *.css
+recursive-include multiorder *.csv
+recursive-include multiorder *.html
+recursive-include multiorder *.ico
+recursive-include multiorder *.js
+recursive-include multiorder *.json
+recursive-include multiorder *.md
+recursive-include multiorder *.png
+recursive-include multiorder *.py
+recursive-include multiorder *.svg
+recursive-include multiorder *.txt
+recursive-exclude multiorder *.pyc

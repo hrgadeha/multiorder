@@ -10,7 +10,6 @@ from frappe.utils import money_in_words
 
 class MultiOrder(Document):
 	def on_submit(doc):
-		frappe.msgprint(len(doc.multiorder_item))
 		doc.in_words = money_in_words(doc.grand_total)
 		for c in doc.multiorder_customer:
 			items = []
@@ -23,10 +22,7 @@ class MultiOrder(Document):
 			"delivery_date": "2018-09-23",
 			"apply_discount_on":doc.apply_discount_on,
 			"additional_discount_percentage":doc.additional_discount_percentage,
-			"discount_amount":doc.additional_discount_amount,
-			"net_total":doc.net_total,
-			"grand_total":doc.grand_total,
-			"in_words":doc.in_words,
+			"total":doc.net_total,
 			"tc_name":doc.terms,
 			"items": items
 			})
